@@ -82,7 +82,7 @@ body{
 .img-stack {
   position: relative;
   width: 360px;
-  margin: 40px auto;
+
 }
 
 .img-stack img {
@@ -199,6 +199,97 @@ products */
 .partner{margin-top:18px;display:flex;flex-direction:column;gap:10px}
 .partner .row{display:flex;gap:12px;align-items:center;justify-content:space-between}
 
+/* about */
+ /* Intro block */
+ #aboutTitle{
+  color: black;
+ }
+    .intro p{
+      margin:14px 0 18px 0;
+      line-height:1.6;
+      color: rgba(255,255,255,0.92);
+      font-size:15px;
+    }
+
+    /* Process steps */
+    .process{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:12px;
+      margin-top:6px;
+    }
+    .step{
+      background: var(--card-bg);
+      padding:12px;
+      border-radius:12px;
+      border:1px solid rgba(255,255,255,0.03);
+      display:flex;
+      gap:12px;
+      align-items:flex-start;
+    }
+    .step .icon{
+      min-width:44px;
+      min-height:44px;
+      border-radius:10px;
+      display:grid;
+      place-items:center;
+      font-weight:700;
+      color:var(--accent);
+      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border:1px solid rgba(255,255,255,0.03);
+      font-size:18px;
+    }
+    .step h4{ margin:0; font-size:14px; }
+    .step p{ margin:4px 0 0 0; font-size:13px; color:var(--muted); line-height:1.45; }
+
+    /* Values & why choose */
+    .side{
+      display:flex;
+      flex-direction:row;
+      gap:16px;
+    }
+    .panel{
+      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border-radius:12px;
+      padding:16px;
+      border:1px solid rgba(255,255,255,0.03);
+      backdrop-filter: blur(6px);
+      width: 100%;
+    }
+
+    .why p{ margin:0; color:var(--muted); font-size:16px;max-width: 100%; }
+
+    .cta{
+      margin-top:18px;
+      display:flex;
+      gap:10px;
+      align-items:center;
+    }
+
+    /* Mission / Vision large */
+    .mv{
+      margin-top:18px;
+      display:flex;
+      gap:12px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.005));
+      padding:14px;
+      border-radius:12px;
+      border:1px solid rgba(255,255,255,0.02);
+    }
+    .mv div{flex:1}
+    .mv h4{margin:0 0 6px 0;}
+    .mv p{margin:0;color:var(--muted); font-size:14px; line-height:1.55;}
+
+    footer.foot{
+      margin-top:18px;
+      font-size:13px;
+      color:var(--muted);
+      display:flex;
+      justify-content:space-between;
+      gap:12px;
+      align-items:center;
+    }
+
 /* responsiveness */
 @media (max-width:1100px){
   .hero{grid-template-columns:1fr;gap:18px}
@@ -227,14 +318,9 @@ products */
     position: relative;
   }
 }
-@media (max-width: 640px) {
-  .img-stack {
-    width: 100%;
-  }
-  .img-stack img {
-    border-radius: 12px;
-  }
-}
+
+
+/* mobile view */
 
 @media (max-width:640px){
   .lead{max-width:100%}
@@ -243,11 +329,71 @@ products */
 
 @media (max-width: 640px) {
 
+ /* about */
+
+  .process{ grid-template-columns: 1fr; }
+
+   .intro p {
+    font-size: 14px;
+    line-height: 1.55;
+  }
+
+  .process {
+    margin-top: 10px;
+  }
+
+  .step .icon {
+    min-width: 40px;
+    min-height: 40px;
+    font-size: 16px;
+  }
+
+  .step h4 {
+    font-size: 13px;
+  }
+
+  .step p {
+    font-size: 12px;
+    line-height: 1.4;
+  }
+
+  .mv h4 {
+    font-size: 14px;
+  }
+
+  .mv p {
+    font-size: 13px;
+  }
+
+  .panel {
+    padding: 14px;
+  }
+
+  .values ul {
+    margin-left: 14px;
+    font-size: 14px;
+  }
+
+  .why p {
+    font-size: 13px;
+  }
+
+  .cta .btn {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .foot {
+    font-size: 12px;
+  }
+
   /* container */
   .container {
     padding: 16px;
   }
-
+ 
+ 
+  
   /* header */
   .header {
     flex-direction: column;
@@ -261,17 +407,37 @@ products */
   }
 
   /* hero section */
-  .hero {
-    grid-template-columns: 1fr;
-    text-align: center;
+
+    .hero {
+    display: flex;
+    flex-direction: row;
   }
 
-  .hero-left {
-    padding: 20px;
+  .hero-right {
+    width: 100%; /* ya jitna chaho */
   }
-  .hero-right{
-    display: none;
+  .img-stack {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
   }
+
+  .img-stack img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  /* Each image thoda niche shift */
+.img1 { top: 0; }
+.img2 { top: 200px; }
+.img3 { top: 400px; }
+.img4 { top: 600px; }
+.img5 { top: 800px; }
+.img6 { top: 1000px; }
+.img7 { top: 1200px; }
+
+  
 
   .lead {
     max-width: 100%;
@@ -281,16 +447,9 @@ products */
     justify-content: center;
   }
 
-  .hero-right {
-    padding: 16px;
-  }
 
   /* img stack */
   .img-stack {
-    width: 100%;
-  }
-
-  .img-stack img {
     width: 100%;
   }
 
@@ -302,7 +461,6 @@ products */
 
   .img-wrap {
     width: 100%;
-    min-height: 220px;
   }
 
   .info {
@@ -334,6 +492,7 @@ products */
     text-align: center;
     gap: 18px;
   }
+
 }
 
 
