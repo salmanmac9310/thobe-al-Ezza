@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title data-key="nav_b2b">B2B & Export — Thoub Al Ezzah</title>
+  <link rel="stylesheet" href="assets/styles.css">
+  <script src="assets/scripts.js">
+  </script>
+</head>
+<body>
+  <header class="header">
+    <div class="brand">
+      <div class="logo"><img src="./images/logo.png" alt="" height="60px" width="60px"></div>
+      <div class="brand-title">
+        <div class="title" data-key="brand_title">Thobe Al Ezza</div>
+      </div>
+    </div>
+
+    <nav class="topnav">
+      <a href="index.html" data-key="nav_home">Home</a>
+      <a href="products.html" data-key="nav_products">Products</a>
+      <a href="manufacturing.html" data-key="nav_manufacturing">Manufacturing</a>
+      <a href="b2b.html" data-key="nav_b2b">B2B & Export</a>
+    </nav>
+
+    <div class="actions">
+      <button id="btn-en" class="btn">EN</button>
+      <button id="btn-ar" class="btn">AR</button>
+      <button id="langToggle" class="btn btn-ghost">Toggle</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="section">
+      <h1 data-key="b2b_title">Start a B2B Order</h1>
+      <div data-key="b2b_sub">Tell us your requirements — we will respond within 48 hours</div>
+
+      <div class="form" style="display:flex;gap:18px;flex-wrap:wrap;margin-top:16px">
+        <form class="card" style="flex:1;min-width:320px" id="b2bForm"  >
+         
+  <input type="text" name="Company" placeholder="company" required>
+  <input type="number" name="Contact" placeholder="contact" required>
+ 
+  <input type="text" name="Quantity" placeholder="quantity(e.g 1000)">  
+          <select name="Option">
+            <option name="Option">Classic Thobes</option>
+            <option name="Option">Premium / Occasion</option>
+            <option name="Option">Seasonal Collections</option>
+            <option name="Option">All Thobes</option>
+            <option name="Option">Saudi thobe</option>
+            <option name="Option">Behrani thobe</option>
+            <option name="Option">Qatri thobe</option>
+            <option name="Option">Saba thobe</option>
+            <option name="Option">Noon thobe</option>
+            <option name="Option">Emarati thobe</option>
+          </select>
+          <textarea type="text" name="Message" placeholder="message"></textarea>
+           <button type="submit" class="btn btn-primary">Send</button>
+        </form>
+
+        <aside class="card" style="width:320px">
+          <h3 data-key="mfg_qc_title">Quality Control</h3>
+          <p>We support private-label, bulk production, and provide packing and export documentation.</p>
+          
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div><strong >Thobe Al Ezza for Industrial Company</strong></div>
+    <div><div data-key="footer_rights">All rights reserved</div></div>
+  </footer>
+  <div id="toast" class="toast" aria-live="polite"></div>
+
+  <script>
+       // Form handlers (basic, override with fetch if you have API)
+ document.getElementById("b2bForm").addEventListener("submit", async function(e){
+    e.preventDefault(); // page reload stop
+
+    const form = this;
+    const data = new FormData(form);
+
+    // SheetDB POST API
+    fetch("https://sheetdb.io/api/v1/400v59hw3xr8i", {
+        method: "POST",
+        body: data
+    })
+    .then(response => response.json())
+    .then(result => {
+        alert("Thank you! ✅ Your message has been sent.");
+        form.reset(); // form clear
+    })
+    .catch(error => {
+        alert("Error, please try again!");
+        console.error(error);
+    });
+});
+
+  </script>
+</body>
+</html>

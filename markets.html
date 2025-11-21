@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title data-key="nav_markets">Markets — Thoub Al Ezzah</title>
+  <link rel="stylesheet" href="assets/styles.css">
+  <script src="assets/scripts.js" defer></script>
+</head>
+<body>
+  <header class="header">
+    <div class="brand">
+      <div class="logo"><img src="./images/logo.png" alt="" height="60px" width="60px"></div>
+      <div class="brand-title">
+        <div class="title" data-key="brand_title">Thobe Al Ezza </div>
+      </div>
+    </div>
+    <nav class="topnav">
+      <a href="index.html" data-key="nav_home">Home</a>
+      <a href="products.html" data-key="nav_products">Products</a>
+      <a href="manufacturing.html" data-key="nav_manufacturing">Manufacturing</a>
+      <a href="b2b.html" data-key="nav_b2b">B2B & Export</a>
+    </nav>
+    <div class="actions">
+      <button id="btn-en" class="btn">EN</button>
+      <button id="btn-ar" class="btn">AR</button>
+      <button id="langToggle" class="btn btn-ghost">Toggle</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="section">
+      <h1 data-key="nav_markets">Markets & Clients</h1>
+      <p>Serving Saudi domestic market and exports — map and details available on request.</p>
+
+      <div style="margin-top:16px;display:flex;gap:12px;flex-wrap:wrap">
+        <div class="card" style="flex:1;min-width:260px">
+          <h4 data-key="years_label">15+ Years</h4>
+          <p>Experience in manufacturing large volumes.</p>
+        </div>
+
+        <div class="card" style="flex:1;min-width:260px">
+          <h4 data-key="industrial_label">Industrial Scale</h4>
+          <p>High capacity lines and consistent quality.</p>
+        </div>
+
+        <div class="card" style="flex:1;min-width:260px">
+          <h4 data-key="export_label">Export Ready</h4>
+          <p>Export documentation and logistics support.</p>
+        </div>
+      </div>
+    </section>
+    
+     <section class="markets" aria-label="Markets overview">
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
+        <div><div style="font-weight:700">Markets Overview</div><div class="form-note">Headquartered in Saudi Arabia with export corridors to GCC, Middle East and India.</div></div>
+        <div style="display:flex;gap:8px;align-items:center"><div style="font-size:12px;color:rgba(3,53,43,0.6)">Partner highlight</div><div style="font-weight:700">Star Angel (India)</div></div>
+      </div>
+
+      <div class="map-wrap" id="mapWrap" aria-hidden="true">
+        <svg viewBox="0 0 600 220" width="100%" height="100%" preserveAspectRatio="xMidYMid meet">
+          <rect width="100%" height="100%" fill="transparent"/>
+          <g fill="#0F988F" opacity="0.06"><ellipse cx="320" cy="110" rx="160" ry="70"></ellipse><ellipse cx="460" cy="120" rx="100" ry="50"></ellipse><ellipse cx="180" cy="90" rx="80" ry="40"></ellipse></g>
+
+          <g transform="translate(320,100)"><circle class="map-dot" cx="0" cy="0"/><text x="18" y="6" font-size="12" fill="#033">Saudi Arabia</text></g>
+          <g transform="translate(420,70)"><circle class="map-dot" cx="0" cy="0" style="width:10px;height:10px"></circle><text x="14" y="5" font-size="12" fill="#033">UAE</text></g>
+          <g transform="translate(470,120)"><circle class="map-dot" cx="0" cy="0"></circle><text x="14" y="5" font-size="12" fill="#033">India</text></g>
+          <g transform="translate(230,40)"><circle class="map-dot" cx="0" cy="0"></circle><text x="14" y="5" font-size="12" fill="#033">GCC</text></g>
+        </svg>
+      </div>
+
+      <div class="partner">
+        <div class="row">
+          <div><div style="font-weight:700">Star Angel (India)</div><div class="form-note">Trusted partner for India distribution and trade facilitation.</div></div>
+          <div><a class="btn btn-primary" href="https://www.starangelinternational.com/" target="_blank" rel="noopener noreferrer">Visit Star Angel International</a></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div><strong >Thobe Al Ezza for Industry Company</strong></div>
+    <div><div data-key="footer_rights">All rights reserved</div></div>
+  </footer>
+  <div id="toast" class="toast" aria-live="polite"></div>
+</body>
+</html>
